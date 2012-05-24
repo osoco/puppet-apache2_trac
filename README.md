@@ -3,7 +3,7 @@ puppet-apache2_trac
 
 Puppet module to manage a typical trac apache2 configuration. Depends on:
   * https://github.com/osoco/puppet-apache2
-  * https://github.com/osoco/apache2_fcgid
+  * https://github.com/osoco/puppet-apache2_fcgid
   * https://github.com/osoco/puppet-apache2_ssl (not mandatory, but usefull for ssl repos)
 
 Example using both apache2 and apache2_ssl modules:
