@@ -1,0 +1,13 @@
+	Alias /chrome/common <%= trac_install_path %>/htdocs/common
+        Alias /chrome/site <%= trac_install_path %>/htdocs/site
+        ScriptAlias <%= trac_location %> <%= trac_install_path %>/cgi-bin/trac.fcgi/
+
+<% if (auth_required) -%>
+        <Location "<%= trac_location %>">            
+            # Authentication: Digest
+            AuthName "<%= auth_name %>"
+            AuthType Digest
+            AuthUserFile <%= auth_file %>
+            Require valid-user
+        </Location>
+<% end -%>
